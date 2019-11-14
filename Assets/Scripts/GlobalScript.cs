@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class GlobalScript : MonoBehaviour
 {
-    public static GlobalScript Instance;
+    public static GlobalScript instance;
     public int score ;
     public Text scoreText;
+    public GameStatus gamestatus;
 
     public int health =0;
     public Text healthText;
@@ -17,16 +18,17 @@ public class GlobalScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instance = this;
+        instance = this;
+        gamestatus = GameStatus.Wait;
     }
      public void Restart(){
-        SceneManager.LoadScene("Gameplay");
+        SceneManager.LoadScene("Game");
     }
 
     // Update is called once per frame
     void Update()
     {
-               Instance = this;
+               instance = this;
 
 
     }
@@ -45,4 +47,10 @@ public class GlobalScript : MonoBehaviour
          }
          
      }
+     public enum GameStatus
+	{
+		Wait,
+		Play,
+		GameOver		
+	}
 }

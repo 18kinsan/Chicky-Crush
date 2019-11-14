@@ -15,10 +15,4 @@ public class RantingScript : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.tag == "Player"){
-            print ("kena player");
-            Destroy(this.gameObject);
-        }
-    }
 }

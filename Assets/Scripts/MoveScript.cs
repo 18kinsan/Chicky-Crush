@@ -22,7 +22,7 @@ public class MoveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    if (GlobalScript.Instance.isGameOver == false){
+    if (GlobalScript.instance.isGameOver == false){
 
 
         objPos = transform.position;
