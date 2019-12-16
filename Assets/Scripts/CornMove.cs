@@ -18,7 +18,7 @@ public class CornMove : MonoBehaviour
     void Update()
     {   
 
-        //transform.position = new Vector3(posX, posY, posZ);
-        transform.Translate(-speedX, -speedY, 0);
+        // transform.position = new Vector3(posX, posY, posZ);
+        transform.Translate(0, -speedY, 0);
     }
 }

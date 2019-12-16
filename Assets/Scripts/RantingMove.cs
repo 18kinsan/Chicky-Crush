@@ -20,6 +20,7 @@ public class RantingMove : MonoBehaviour
     {   
 
         //transform.position = new Vector3(posX, posY, posZ);
-        transform.Translate(-speedX, -speedY, 0);
+        if(GlobalScript.instance.gamestatus == GlobalScript.GameStatus.Play)
+            transform.Translate(-speedX, -speedY, 0);
     }
 }
